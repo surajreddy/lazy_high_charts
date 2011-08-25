@@ -22,7 +22,7 @@ module LazyHighCharts
             // 1. Define JSON options
             var options = {
                           chart: #{object.options[:chart].to_json},
-                                  colors: #{object.options[:colors].to_json}
+                                  colors: #{object.options[:colors].to_json},
                                   title: #{object.options[:title].to_json},
                                   legend: #{object.options[:legend].to_json},
                                   xAxis: #{object.options[:x_axis].to_json},
