@@ -15,6 +15,7 @@ module LazyHighCharts
       high_graph_stock(placeholder,object , &block).concat(content_tag("div","", object.html_options))
     end
 
+    #colors: #{object.options[:colors].to_json},
     def high_graph(placeholder, object, &block)
       graph =<<-EOJS
       <script type="text/javascript">
@@ -22,7 +23,6 @@ module LazyHighCharts
             // 1. Define JSON options
             var options = {
                           chart: #{object.options[:chart].to_json},
-                                  colors: #{object.options[:colors].to_json},
                                   title: #{object.options[:title].to_json},
                                   legend: #{object.options[:legend].to_json},
                                   xAxis: #{object.options[:x_axis].to_json},
